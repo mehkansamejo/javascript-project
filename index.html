@@ -1,0 +1,772 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>HTML - Complete Introduction</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e34f26, #f06529);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 55px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 21px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #e34f26;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #e34f26;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #c2410c;
+        }
+
+        .hero-image {
+            display: block;
+            width: 180px;
+            margin: 25px auto;
+        }
+
+        .feature-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .feature {
+            padding: 20px;
+            background: #fff7ed;
+            border-left: 5px solid #e34f26;
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            margin-top: 0;
+        }
+
+        .structure {
+            background: #111827;
+            color: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 7px;
+            border-radius: 5px;
+            color: #c2410c;
+        }
+
+        .structure code {
+            background: transparent;
+            color: white;
+        }
+
+        .flow {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 25px;
+            background: #fff7ed;
+            border-radius: 12px;
+        }
+
+        .tag-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .tag-table th,
+        .tag-table td {
+            border: 1px solid #ddd;
+            padding: 13px;
+            text-align: left;
+        }
+
+        .tag-table th {
+            background: #e34f26;
+            color: white;
+        }
+
+        .tag-table tr:nth-child(even) {
+            background: #fff7ed;
+        }
+
+        .video {
+            text-align: center;
+        }
+
+        .video iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            .feature-box {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .video iframe {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>HTML</h1>
+
+        <p>HyperText Markup Language</p>
+
+        <p>
+            The foundation of every web page
+        </p>
+
+        <img
+            class="hero-image"
+            src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png"
+            alt="HTML5 Logo">
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <a href="#what">What is HTML?</a>
+
+        <a href="#working">How It Works</a>
+
+        <a href="#features">Features</a>
+
+        <a href="#structure">Structure</a>
+
+        <a href="#tags">Tags</a>
+
+        <a href="#video">Video</a>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- ================= WHAT IS HTML ================= -->
+
+        <section id="what">
+
+            <h2>🌐 What is HTML?</h2>
+
+            <p>
+                <strong>HTML</strong> stands for
+                <strong>HyperText Markup Language</strong>.
+            </p>
+
+            <p>
+                HTML is the standard markup language used to
+                create the structure and content of web pages.
+            </p>
+
+            <p>
+                It tells a web browser what different parts
+                of a webpage are, such as headings, paragraphs,
+                images, links, lists, tables and forms.
+            </p>
+
+            <p>
+                HTML is not a programming language.
+                It is a <strong>markup language</strong>.
+            </p>
+
+        </section>
+
+
+        <!-- ================= HOW HTML WORKS ================= -->
+
+        <section id="working">
+
+            <h2>⚙️ How Does HTML Work?</h2>
+
+            <p>
+                HTML works by using elements and tags.
+                The developer writes HTML code inside an
+                HTML file, usually with the extension
+                <code>.html</code>.
+            </p>
+
+            <p>
+                The web browser reads this HTML code and
+                converts it into the webpage that we see.
+            </p>
+
+            <div class="flow">
+
+                👩‍💻 Write HTML
+
+                →
+
+                📄 HTML File
+
+                →
+
+                🌐 Browser
+
+                →
+
+                🖥️ Web Page
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section id="features">
+
+            <h2>✨ Important Features of HTML</h2>
+
+            <p>
+                HTML provides many elements that allow developers
+                to create the structure and content of websites.
+            </p>
+
+
+            <div class="feature-box">
+
+                <div class="feature">
+
+                    <h3>🧱 Page Structure</h3>
+
+                    <p>
+                        HTML provides the basic structure of a
+                        webpage using elements such as
+                        html, head and body.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>📝 Text Content</h3>
+
+                    <p>
+                        HTML allows developers to create headings,
+                        paragraphs and different types of text.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>🔗 Hyperlinks</h3>
+
+                    <p>
+                        HTML allows users to move between webpages
+                        using hyperlinks.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>🖼️ Images</h3>
+
+                    <p>
+                        HTML provides the image element for
+                        displaying pictures on webpages.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>📋 Lists</h3>
+
+                    <p>
+                        HTML supports ordered and unordered
+                        lists for organizing information.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>📊 Tables</h3>
+
+                    <p>
+                        HTML tables are used to display
+                        information in rows and columns.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>📝 Forms</h3>
+
+                    <p>
+                        HTML forms allow users to enter information
+                        such as names, emails and passwords.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>🎵 Multimedia</h3>
+
+                    <p>
+                        HTML supports multimedia elements such as
+                        audio and video.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>🧩 Semantic HTML</h3>
+
+                    <p>
+                        Semantic elements describe the meaning
+                        of different parts of a webpage.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <h3>🔑 Attributes</h3>
+
+                    <p>
+                        Attributes provide additional information
+                        about HTML elements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STRUCTURE ================= -->
+
+        <section id="structure">
+
+            <h2>🏗️ Basic Structure of an HTML5 Document</h2>
+
+            <p>
+                Every HTML document normally starts with a basic
+                structure. The main parts are explained below.
+            </p>
+
+
+            <div class="structure">
+
+<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+    &lt;head&gt;
+
+        &lt;title&gt;My Web Page&lt;/title&gt;
+
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+
+        &lt;p&gt;This is my webpage.&lt;/p&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+            </div>
+
+
+            <h3>DOCTYPE</h3>
+
+            <p>
+                <code>&lt;!DOCTYPE html&gt;</code> tells the browser
+                that the document uses HTML5.
+            </p>
+
+
+            <h3>HTML Element</h3>
+
+            <p>
+                <code>&lt;html&gt;</code> is the root element
+                of an HTML document.
+            </p>
+
+
+            <h3>Head</h3>
+
+            <p>
+                <code>&lt;head&gt;</code> contains information
+                about the webpage, such as its title and metadata.
+            </p>
+
+
+            <h3>Body</h3>
+
+            <p>
+                <code>&lt;body&gt;</code> contains the visible
+                content of the webpage.
+            </p>
+
+        </section>
+
+
+        <!-- ================= TAGS ================= -->
+
+        <section id="tags">
+
+            <h2>🏷️ HTML Tags and Elements</h2>
+
+            <p>
+                HTML uses tags to define different types of content.
+                A complete HTML element can contain an opening tag,
+                content and a closing tag.
+            </p>
+
+            <div class="structure">
+
+<pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</pre>
+
+            </div>
+
+            <p>
+                Here <code>&lt;p&gt;</code> is the opening tag,
+                the text is the content, and
+                <code>&lt;/p&gt;</code> is the closing tag.
+            </p>
+
+        </section>
+
+
+        <!-- ================= COMMON ELEMENTS ================= -->
+
+        <section>
+
+            <h2>📚 Common HTML Elements</h2>
+
+            <table class="tag-table">
+
+                <tr>
+                    <th>Element</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                    <td>Creates headings</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;p&gt;</td>
+                    <td>Creates paragraphs</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>Creates hyperlinks</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;img&gt;</td>
+                    <td>Displays images</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;ul&gt;</td>
+                    <td>Creates unordered lists</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;ol&gt;</td>
+                    <td>Creates ordered lists</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Creates tables</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;form&gt;</td>
+                    <td>Creates forms</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;audio&gt;</td>
+                    <td>Embeds audio</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;video&gt;</td>
+                    <td>Embeds video</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= ATTRIBUTES ================= -->
+
+        <section>
+
+            <h2>🔑 HTML Attributes</h2>
+
+            <p>
+                Attributes provide additional information about
+                an HTML element.
+            </p>
+
+            <p>
+                They are written inside the opening tag.
+            </p>
+
+            <div class="structure">
+
+<pre>
+&lt;a href="https://example.com"&gt;
+    Visit Website
+&lt;/a&gt;
+</pre>
+
+            </div>
+
+            <p>
+                Here <code>href</code> is an attribute that
+                specifies the destination of the link.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SEMANTIC HTML ================= -->
+
+        <section>
+
+            <h2>🧩 Semantic HTML</h2>
+
+            <p>
+                Semantic HTML uses meaningful elements to describe
+                the purpose of different sections of a webpage.
+            </p>
+
+            <table class="tag-table">
+
+                <tr>
+                    <th>Element</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>&lt;header&gt;</td>
+                    <td>Page or section header</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;nav&gt;</td>
+                    <td>Navigation links</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;main&gt;</td>
+                    <td>Main content</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;section&gt;</td>
+                    <td>A section of content</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;article&gt;</td>
+                    <td>Independent content</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;footer&gt;</td>
+                    <td>Footer of a page or section</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= HTML VIDEO ================= -->
+
+        <section id="video" class="video">
+
+            <h2>🎥 Learn HTML - Video</h2>
+
+            <p>
+                This video is included as a learning resource
+                for understanding HTML.
+            </p>
+
+            <iframe
+                src="https://www.youtube.com/embed/BsDoLVMnmZs"
+                title="HTML Tutorial For Beginners"
+                allowfullscreen>
+            </iframe>
+
+        </section>
+
+
+        <!-- ================= CONCLUSION ================= -->
+
+        <section>
+
+            <h2>🎯 Why Learn HTML?</h2>
+
+            <p>
+                HTML is the foundation of web development.
+                Before learning advanced web technologies,
+                it is important to understand HTML.
+            </p>
+
+            <p>
+                HTML gives a webpage its structure and allows
+                us to organize text, images, links, lists,
+                tables, forms and multimedia content.
+            </p>
+
+            <p>
+                Once you understand HTML, you can move forward
+                to technologies such as CSS and JavaScript.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            HTML Learning Page
+        </p>
+
+        <p>
+            Web Engineering Lab
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
